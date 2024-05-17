@@ -1,0 +1,180 @@
+// Variáveis
+$modal-bg-color: rgba(0, 0, 0, 0.5);
+$white-color: #ffffff;
+$gray-color: #787D83;
+$dark-gray-color: #464B54;
+$primary-color: #FAA500;
+$border-color: #c4c4c4;
+$border-radius: 0.6rem;
+$padding-sm: 0 0.5rem;
+$padding-md: 2rem;
+$font-size-sm: 0.9rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.3rem;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+$uppercase: uppercase;
+$z-index-modal: 3;
+$z-index-popup: 2;
+$popup-width: 53rem;
+$popup-height: 33rem;
+$popup-width-mobile: 80%;
+$popup-height-mobile: 25rem;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin position-center($top: 0, $left: 0, $right: 0, $bottom: 0) {
+    position: fixed;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+.removeModal #modal_login {
+    display: none;
+}
+
+#modal_login {
+    @include position-center;
+    background: $modal-bg-color;
+    text-align: center;
+    z-index: $z-index-modal;
+
+    .popup_modal {
+        @include position-center(14rem, 0, 0, auto);
+        z-index: $z-index-popup;
+        width: $popup-width;
+        height: $popup-height;
+        background: $white-color;
+        transform: scale(1.1);
+
+        .close_modal {
+            position: absolute;
+            top: -1.5rem;
+            left: 49.5rem;
+
+            button {
+                background: transparent;
+                color: $white-color;
+                border: none;
+                font-size: $font-size-md;
+                font-weight: $font-weight-normal;
+            }
+        }
+
+        .content_modal {
+            display: flex;
+
+            .form_modal {
+                display: grid;
+                line-height: $font-size-md;
+                text-align: center;
+                justify-content: center;
+                margin: 0 auto;
+                margin-top: $padding-md;
+                height: 23rem;
+
+                svg {
+                    margin: 0 auto;
+                }
+
+                span {
+                    font-size: $font-size-sm;
+                    margin-top: -$padding-md;
+                    color: $dark-gray-color;
+                    text-transform: $uppercase;
+                }
+
+                p,
+                strong {
+                    color: $gray-color;
+                    font-size: $font-size-lg;
+                    margin-top: -$padding-md;
+                }
+
+                form {
+                    display: grid;
+
+                    input {
+                        border-radius: $border-radius;
+                        padding: $padding-sm;
+                        border: 1px solid $border-color;
+                        background: $white-color;
+                        width: 20rem;
+                        height: 2.5rem;
+                    }
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: $primary-color;
+                        height: 2.5rem;
+                        color: $white-color;
+                        font-size: $font-size-md;
+                        font-weight: $font-weight-bold;
+                        border: none;
+                        border-radius: $border-radius;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 414px) {
+            width: $popup-width-mobile;
+            height: $popup-height-mobile;
+
+            .close_modal {
+                left: auto;
+                right: 0;
+
+                button {
+                    font-weight: $font-weight-bold;
+                    font-size: 1.1rem;
+                }
+            }
+
+            .content_modal {
+                width: auto;
+
+                .image_modal {
+                    display: none;
+                }
+
+                .form_modal {
+                    height: 21rem;
+
+                    form {
+
+                        input,
+                        button {
+                            height: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            width: 85%;
+            top: 12rem;
+
+            .content_modal .form_modal {
+                height: 21rem;
+
+                form {
+
+                    input,
+                    button {
+                        height: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}

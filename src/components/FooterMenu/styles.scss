@@ -1,0 +1,113 @@
+// Variáveis
+$second-color: var(--second-color);
+$primary-dark-color: var(--primary-dark-color);
+$padding-xs: 44px 20px 64px;
+$padding-sm: 40px 30px 56px;
+$max-width-desktop: 952px;
+$max-width-mobile: 640px;
+$font-size-sm: 12px;
+$font-size-md: 16px;
+$font-weight-bold: 700;
+$line-height-sm: 18px;
+$margin-top-sm: 16px;
+$margin-top-md: 24px;
+$margin-left-md: 16px;
+$color-button: $second-color;
+$color-link: $primary-dark-color;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.footer-menu {
+  padding: $padding-xs;
+
+  @media (max-width: 1025px) {
+    padding: $padding-sm;
+  }
+}
+
+.footer-menu__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: $max-width-desktop;
+  margin: 0 auto;
+
+  @media (max-width: 1025px) {
+    flex-direction: column;
+    max-width: $max-width-mobile;
+  }
+
+  >*+* {
+    @media (min-width: 1026px) {
+      margin-left: $margin-left-md;
+    }
+
+    @media (max-width: 1025px) {
+      margin-top: $margin-top-sm;
+    }
+  }
+
+  div[role="button"] {
+    @include flex-center;
+    justify-content: space-between;
+    color: $color-button;
+    cursor: pointer;
+
+    span {
+      font-size: $font-size-md;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-sm;
+    }
+
+    @media (min-width: 1026px) {
+      margin-bottom: $margin-top-md;
+
+      svg {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1025px) {
+      &::after {
+        display: block;
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-sm;
+      }
+    }
+  }
+
+  .vtex__icon-caret-down,
+  .vtex__icon-caret-up {
+    display: none;
+  }
+
+  div[role="region"] a {
+    margin-top: $margin-top-sm;
+    color: $color-link;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+
+    @media (min-width: 1026px) {
+      margin-bottom: $margin-top-md;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  div[aria-expanded="false"]::after {
+    @media (max-width: 1025px) {
+      content: "+";
+    }
+  }
+
+  div[aria-expanded="true"]::after {
+    @media (max-width: 1025px) {
+      content: "-";
+    }
+  }
+}

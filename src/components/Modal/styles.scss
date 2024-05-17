@@ -1,0 +1,166 @@
+// Variáveis
+$modal-bg-color: rgba(0, 0, 0, 0.7);
+$primary-color: var(--primary-color);
+$primary-light-color: var(--primary-light-color);
+$font-color-dark: #464b54;
+$font-color-gray: #787d83;
+$border-color: #c4c4c4;
+$border-radius: 10px;
+$padding-sm: 10px 12px;
+$padding-md: 16px;
+$padding-lg: 40px 20px 24px;
+$padding-close-btn: 0 0 6px auto;
+$font-family: "Lato", sans-serif;
+$font-size-sm: 12px;
+$font-size-md: 20px;
+$line-height-sm: 20px;
+$line-height-md: 23px;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$uppercase: uppercase;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: $modal-bg-color;
+  @include flex-center;
+  padding: $padding-md;
+}
+
+.modal__wrapper {
+  width: 100%;
+  max-width: 848px;
+}
+
+.modal__close {
+  text-align: end;
+
+  button {
+    font-family: $font-family;
+    color: $primary-light-color;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+    text-transform: $uppercase;
+    margin: $padding-close-btn;
+  }
+}
+
+.modal__content {
+  @include flex-center;
+  background-color: $primary-light-color;
+}
+
+.modal__image {
+  width: 50%;
+}
+
+.modal__form-wrapper {
+  padding: 0 $padding-md;
+  width: 50%;
+}
+
+.modal__form-content {
+  width: 100%;
+  max-width: 322px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    color: $font-color-dark;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-sm;
+    text-transform: $uppercase;
+    margin: 12px auto;
+  }
+
+  h2 {
+    color: $font-color-gray;
+    font-size: $font-size-md;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-md;
+    margin: 0 auto 24px;
+
+    strong {
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  input {
+    width: 100%;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    padding: $padding-sm;
+    margin: 0 auto 12px;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+  }
+
+  button {
+    @include flex-center;
+    width: 100%;
+    border-radius: $border-radius;
+    background-color: $primary-color;
+    padding: $padding-sm;
+    color: $primary-light-color;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
+    text-transform: $uppercase;
+
+    &::after {
+      display: block;
+      content: "";
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjMxMjUgMC42NjQwNjJMMS41NjI1IDYuMjg5MDZDMC43NDIxODggNi43NTc4MSAwLjgxMjUgNy45NTMxMiAxLjY3OTY5IDguMzA0NjlMNC4zNzUgOS40MDYyNVYxMS4zNzVDNC4zNzUgMTIuNDc2NiA1Ljc1NzgxIDEyLjkyMTkgNi4zOTA2MiAxMi4wNTQ3TDcuNDIxODggMTAuNjcxOUwxMC4wNDY5IDExLjc1QzEwLjE4NzUgMTEuODIwMyAxMC4zMjgxIDExLjg0MzggMTAuNDY4OCAxMS44NDM4QzEwLjY1NjIgMTEuODQzOCAxMC44NDM4IDExLjc5NjkgMTEuMDMxMiAxMS43MDMxQzExLjMzNTkgMTEuNTE1NiAxMS41MjM0IDExLjIzNDQgMTEuNTkzOCAxMC44ODI4TDEyLjk3NjYgMS44MTI1QzEzLjExNzIgMC44NzUgMTIuMTA5NCAwLjE5NTMxMiAxMS4zMTI1IDAuNjY0MDYyWk01LjUgMTEuMzc1VjkuODc1TDYuMzQzNzUgMTAuMjI2Nkw1LjUgMTEuMzc1Wk0xMC40Njg4IDEwLjcxODhMNi44NTkzOCA5LjIxODc1TDEwLjE2NDEgNC40ODQzOEMxMC4zOTg0IDQuMTA5MzggOS45Mjk2OSAzLjY4NzUgOS42MDE1NiAzLjk5MjE5TDQuNjMyODEgOC4zMDQ2OUwyLjEyNSA3LjI1TDExLjg3NSAxLjYyNUwxMC40Njg4IDEwLjcxODhaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 14px;
+      height: 13px;
+      margin-left: 8px;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .modal__wrapper {
+    width: 100%;
+    max-width: 298px;
+  }
+
+  .modal__close button {
+    margin: 0 0 2px auto;
+  }
+
+  .modal__form-wrapper {
+    width: 100%;
+    padding: $padding-lg;
+  }
+
+  .modal__form-content h2 {
+    font-size: 16px;
+  }
+
+  .modal__form input {
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,52 @@
+// Variáveis
+$background-color-form: #efefef;
+$primary-light-color: var(--primary-light-color);
+$primary-color: var(--primary-color);
+$border-radius-form: 10px;
+$border-radius-button: 8px;
+$padding-left-form: 24px;
+$padding-sm: 8px;
+$padding-right-input: 16px;
+$max-width-form: 790px;
+$max-width-button: 120px;
+$height-form: 40px;
+$font-size-input: 12px;
+$line-height-input: 18px;
+$font-size-button: 14px;
+$line-height-button: 21px;
+
+@mixin flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar__form {
+  width: 100%;
+  max-width: $max-width-form;
+  @include flex-space-between;
+  background-color: $background-color-form;
+  border-radius: $border-radius-form;
+  height: $height-form;
+  padding-left: $padding-left-form;
+
+  input {
+    width: 100%;
+    font-size: $font-size-input;
+    line-height: $line-height-input;
+    padding-right: $padding-right-input;
+  }
+
+  button {
+    width: 100%;
+    max-width: $max-width-button;
+    color: $primary-light-color;
+    text-align: center;
+    font-size: $font-size-button;
+    line-height: $line-height-button;
+    height: 100%;
+    border-radius: $border-radius-button;
+    background-color: $primary-color;
+    padding: $padding-sm;
+  }
+}
