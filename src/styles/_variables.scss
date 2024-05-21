@@ -1,15 +1,151 @@
+// Core Colors
 :root {
   --primary-color: #faa500;
-  --second-color: #353535;
+  --secondary-color: #353535;
   --primary-dark-color: #000000;
+  --secondary-dark-color: #464b54;
   --primary-light-color: #ffffff;
-  --second-light-color: #fafafa;
+  --secondary-light-color: #fafafa;
+  --font-color-gray: #787d83;
+
+  --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+  --box-shadow-1: rgba(0, 0, 0, 0.05) 1px 1px 4px;
+
+  --modal-bg-color: rgba(0, 0, 0, 0.7);
+  --background-color-form: #efefef;
+}
+
+// Spacing
+:root {
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  --padding-md: 20px;
+  --padding-1-md: 16px;
+  --padding-2-md: 24px 30px;
+  --padding-3-md: 0 30px 24px 16px;
+
+  --padding-lg: 28px 20px;
+  --padding-1-lg: 40px 20px 24px;
+  --padding-2-lg: 40px 20px;
+  --padding-3-lg: 0 0 8px;
+
   --padding-xs: 18px 20px;
+  --padding-1-xs: 44px 20px 64px;
+  --padding-2-xs: 3px 20px;
+  --padding-3-xs: 10px 26px 8px;
+
   --padding-sm: 24px 30px 32px;
-  --max-width: 1600px;
+  --padding-1-sm: 40px 30px 56px;
+  --padding-2-sm: 14px 20px;
+  --padding-3-sm: 10px 12px;
+  --padding-4-sm: 8px 44px;
+  --padding-5-sm: 8px;
+  --padding-6-sm: 0 16px 80px;
+
+  --padding-highlight: 12px 16px;
+  --padding-close-btn: 0 0 6px auto;
+  --padding-left-form: 24px;
+  --padding-right-input: 16px;
+  --padding-slide: 0 8px;
+
+  --margin-sm: 12px;
+  --margin-1-sm: 16px;
+  --margin-2-sm: 8px 0 2px;
+
+  --margin-md: 20px;
+  --margin-1-md: 56px;
+  --margin-2-md: 0 auto 24px;
+
+
   --margin-bottom: 36px;
   --margin-right: 16px;
+  --margin-xs: 8px;
+
+  --margin-lg: 24px;
+  --margin-1-lg: 0 0 8px;
+
+
+  --margin-xl: 40px;
   --margin-left: 22px;
+  --margin-left-md: 16px;
   --margin-left-lg: 24px;
   --margin-left-copyright: 20px;
+  --margin-top-sm: 16px;
+  --margin-top-md: 24px;
+
+  --margin-title-mobile: 0 auto 20px;
+}
+
+// Typography
+:root {
+
+  --upercase: uppercase;
+
+  --font-family-primary: "Titillium Web", sans-serif;
+  --font-family-secondary: "Lato", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-1-md: 14px;
+  --font-size-2-md: 20px;
+  --font-size-md: 16px;
+  --font-size-lg: 24px;
+  --font-size-title: 32px;
+
+
+  --height-sm: 28px;
+  --height-lg: 42px;
+  --height-form: 40px;
+  --height-product: 100%;
+  --height-cart: 34px;
+
+
+  --line-height-sm: 18px;
+  --line-height-1-sm: 20px;
+  --line-height-md: 21px;
+  --line-height-1-md: 23px;
+}
+
+// Layout
+:root {
+
+  --max-width-container: 1640px;
+  --max-width-menu: 1154px;
+  --max-width: 1600px;
+
+  --max-width-desktop: 952px;
+  --max-width-mobile: 640px;
+
+  --max-width-shelf: 1632px;
+  --max-width-form: 630px;
+  --max-width-1-form: 790px;
+  --max-width-button: 120px;
+}
+
+// Footer Specific
+:root {
+  --footer-padding-xs: 44px 20px 64px;
+  --footer-padding-sm: 40px 30px 56px;
+  --footer-margin-top-sm: 16px;
+  --footer-margin-top-md: 24px;
+  --footer-margin-left-md: 16px;
+  --footer-color-button: var(--secondary-color);
+  --footer-color-link: var(--primary-dark-color);
+}
+
+// Border
+:root {
+  --border-radius: 8px;
+  --border-radius-1: 10px;
+  --border-radius-sm: 4px;
+  --border-radius-lg: 4px 0 0 4px;
+  --border-color: #c4c4c4;
+  --border-color-1: #efefef;
 }

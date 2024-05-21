@@ -1,26 +1,3 @@
-// Variáveis
-$modal-bg-color: rgba(0, 0, 0, 0.5);
-$white-color: #ffffff;
-$gray-color: #787D83;
-$dark-gray-color: #464B54;
-$primary-color: #FAA500;
-$border-color: #c4c4c4;
-$border-radius: 0.6rem;
-$padding-sm: 0 0.5rem;
-$padding-md: 2rem;
-$font-size-sm: 0.9rem;
-$font-size-md: 1rem;
-$font-size-lg: 1.3rem;
-$font-weight-normal: 500;
-$font-weight-bold: 700;
-$uppercase: uppercase;
-$z-index-modal: 3;
-$z-index-popup: 2;
-$popup-width: 53rem;
-$popup-height: 33rem;
-$popup-width-mobile: 80%;
-$popup-height-mobile: 25rem;
-
 @mixin flex-center {
     display: flex;
     align-items: center;

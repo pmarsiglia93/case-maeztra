@@ -1,11 +1,10 @@
-// import Popup from "./components/Popup";
 import ModalPopUp from "./components/Modal";
 import { HeaderDesktop, HeaderMobile } from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import "./styles/global.scss";
 import useIsMobile from "./hooks/device";
 
+import "./styles/global.scss";
 
 function App() {
   const isMobile = useIsMobile();
